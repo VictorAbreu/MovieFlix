@@ -1,0 +1,12 @@
+
+.main-nav{
+    display: flex;
+    align-items: center;
+    min-height: 70px;
+    padding-left: 40px;
+    background-color: #FFC700;
+}
+
+.nav-logo-text h2{
+    color: #000000;
+}

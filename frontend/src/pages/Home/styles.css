@@ -1,0 +1,89 @@
+.home-container-card {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+.home-content-container {
+  display: none;
+}
+
+.home-login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 300px;
+  height: 580px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+}
+
+.home-login-container h1 {
+  text-align: center;
+  font-weight: normal;
+  letter-spacing: -0.015em;
+  font-size: 48px;
+  width: 317px;
+  height: 67px;
+  margin-top: 75px;
+  margin-bottom: 35px;
+}
+
+.home-login-container input {
+  width: 264px;
+  margin-bottom: 30px;
+  padding-left: 12px;
+  font-size: 16px;
+}
+
+.home-login-container {
+  background-color: #6c6c6c;
+  border-radius: 4px;
+}
+
+@media (min-width: 576px) {
+  .home-login-container {
+    width: 479px;
+  }
+
+  .home-login-container input {
+    width: 385px;
+  }
+
+  .home-container-card {
+    padding: 40px;
+  }
+
+}
+
+@media (min-width: 1200px) {
+  .home-content-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 80px;
+  }
+
+  .home-content-container h1 {
+    padding-left: 25px;
+    margin-bottom: 20px;
+    letter-spacing: -0.015em;
+    font-size: 48px;
+  }
+
+  .home-content-container p {
+    padding-left: 25px;
+    margin-bottom: 20px;
+    letter-spacing: -0.015em;
+    font-size: 22px;
+    width: 300px;
+  }
+
+  .home-content-container svg {
+    width: 382px;
+    height: 365px;
+  }
+
+  .home-login-container {
+    margin-left: 200px;
+  }
+}
