@@ -1,13 +1,12 @@
 import Navbar from 'components/Navbar';
-import Movies from 'pages/Movies';
-import React from 'react';
+import MovieDetails from 'pages/MovieDetails';
 import './App.css';
 
 function App() {
   return (
     <>
     <Navbar/>
-    <Movies/>
+    <MovieDetails/>
     </>
   );
 }
