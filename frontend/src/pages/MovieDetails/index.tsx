@@ -3,7 +3,7 @@ import ButtonIcon from "components/ButtonIcon";
 import { ReactComponent as StarImage } from "assets/images/star.svg";
 import "./styles.css";
 
-const Movies = () => {
+const MovieDetails = () => {
   return (
     <div className="movies-container-details">
       <div>
@@ -56,4 +56,4 @@ const Movies = () => {
   );
 };
 
-export default Movies;
+export default MovieDetails;

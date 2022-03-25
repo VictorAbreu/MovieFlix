@@ -1,12 +1,11 @@
-import Navbar from 'components/Navbar';
-import MovieDetails from 'pages/MovieDetails';
+
+import Routes from 'Routes';
 import './App.css';
 
 function App() {
   return (
     <>
-    <Navbar/>
-    <MovieDetails/>
+    <Routes/>
     </>
   );
 }

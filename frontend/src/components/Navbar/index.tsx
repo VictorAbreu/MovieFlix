@@ -6,6 +6,9 @@ const Navbar = () => {
       <div className="nav-logo-text">
         <h2>MovieFlix</h2>
       </div>
+      <div className="nav-btn-exit">
+        <a href="#logout">SAIR</a>
+      </div>
     </nav>
   );
 };

@@ -25,7 +25,7 @@ const Home = () => {
           placeholder="Password"
           name="password"
         />
-        <ButtonIcon text="fazer login"/>
+        <ButtonIcon text="fazer login"></ButtonIcon>
       </div>
       
     </div>

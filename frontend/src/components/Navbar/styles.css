@@ -1,12 +1,28 @@
-
-.main-nav{
-    display: flex;
-    align-items: center;
-    min-height: 70px;
-    padding-left: 40px;
-    background-color: #FFC700;
+.main-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 70px;
+  padding-left: 40px;
+  background-color: #ffc700;
 }
 
-.nav-logo-text h2{
-    color: #000000;
+.nav-logo-text h2 {
+  color: #000000;
+}
+
+.nav-btn-exit {
+  width: 100px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 30px;
+  border: 2px solid #000000;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+
+.nav-btn-exit a {
+font-weight: bold;
 }
