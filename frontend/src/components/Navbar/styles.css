@@ -23,6 +23,10 @@
   border-radius: 10px;
 }
 
+.nav-btn-exit-none {
+  display: none;
+}
+
 .nav-btn-exit a {
 font-weight: bold;
 }

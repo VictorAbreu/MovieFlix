@@ -1,26 +1,30 @@
-import Navbar from "components/Navbar";
-import Home from "pages/Home";
-import MovieDetails from "pages/MovieDetails";
-import Movies from "pages/Movies";
-import { Switch, Route, BrowserRouter } from "react-router-dom";
+import Navbar from 'components/Navbar';
+import PrivateRoute from 'components/PrivateRoute';
+import Login from 'pages/Login';
+import MovieDetails from 'pages/MovieDetails';
+import Movies from 'pages/Movies';
+import { Switch, Route, Router } from 'react-router-dom';
+import history from 'util/history';
 
 const Routes = () => (
-  <BrowserRouter>
+  <Router history={history}>
     <Navbar />
     <Switch>
       <Route path="/" exact>
-        <Home />
+        <Login />
       </Route>
 
-      <Route path="/movies" exact>
-        <Movies />
-      </Route>
+      <PrivateRoute path="/movies" roles={['ROLE_MEMBER']}>
+        <Route path="/movies" exact>
+          <Movies />
+        </Route>
 
-      <Route path="/movies/1" exact>
-        <MovieDetails />
-      </Route>
+        <Route path="/movies/:movieId">
+          <MovieDetails />
+        </Route>
+      </PrivateRoute>
     </Switch>
-    </BrowserRouter>
+  </Router>
 );
 
 export default Routes;

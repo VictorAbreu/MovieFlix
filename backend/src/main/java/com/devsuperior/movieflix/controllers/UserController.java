@@ -13,7 +13,7 @@ import com.devsuperior.movieflix.services.UserService;
 
 @RestController
 @RequestMapping(value = "/users")
-public class UserResource {
+public class UserController {
 	
 	@Autowired
 	private UserService service;
