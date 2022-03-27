@@ -14,7 +14,7 @@ const Routes = () => (
         <Login />
       </Route>
 
-      <PrivateRoute path="/movies" roles={['ROLE_MEMBER']}>
+      <PrivateRoute path="/movies">
         <Route path="/movies" exact>
           <Movies />
         </Route>
