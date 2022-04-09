@@ -1,17 +1,25 @@
+.movies-container-principal {
+  padding: 10px;
+  padding-top: 20px;
+  background: #525252;
+}
+
+.movies-container-principal h2 {
+  margin-bottom: 40px;
+}
 
 
-.movies-container{
+
+@media (min-width: 1200px) {
+
+  .movies-container-principal {
     display: flex;
     flex-direction: column;
-    margin-top: 40px;
-    margin-left: 30px;
-}
-
-.movies-container h2{
-    margin-bottom: 40px;
-}
-
-.movies-container a{
-    margin-bottom: 20px;
-    color: #fff;
+    align-items: center;
+    justify-content: center;
+  }
+  .list-card-container{
+    display: flex;
+    max-width: 992px;
+  }
 }

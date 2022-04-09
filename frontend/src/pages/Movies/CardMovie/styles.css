@@ -1,0 +1,41 @@
+.cardmovie-container {
+  margin-bottom: 20px;
+  background: #6c6c6c;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+  border-radius: 4px;
+}
+
+.cardmovie-container img {
+  width: 100%;
+}
+
+.cardmovie-text-container {
+  padding: 15px;
+}
+
+.cardmovie-text-container h3 {
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: -0.015em;
+  color: #ffffff;
+}
+
+.cardmovie-text-container h4 {
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: -0.015em;
+  color: #ffc700;
+}
+
+.cardmovie-text-container p {
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: -0.015em;
+  color: #ffffff;
+}
+
+@media (min-width: 576px) {
+  .cardmovie-container {
+    margin-left: 0px;
+  }
+}
