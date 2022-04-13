@@ -7,6 +7,8 @@ import { requestBackend } from 'util/requests';
 import { Review } from 'type/review';
 import FormReview from 'components/FormReview';
 import ListReview from 'components/ListReview';
+import CardMovieDetail from './CardMovieDetail';
+import { Movie } from 'type/movie';
 
 type urlParams = {
   movieId: string;
@@ -15,7 +17,7 @@ type urlParams = {
 const MovieDetails = () => {
   const { movieId } = useParams<urlParams>();
 
-  console.log(movieId);
+  const [movie, setMovie] = useState<Movie>();
 
   const [reviews, setReviews] = useState<Review[]>([]);
 
@@ -30,6 +32,17 @@ const MovieDetails = () => {
     });
   }, [movieId]);
 
+  useEffect(() => {
+    const movies: AxiosRequestConfig = {
+      method: 'GET',
+      url: `/movies/${movieId}`,
+      withCredentials: true,
+    };
+    requestBackend(movies).then((response) => {
+      setMovie(response.data);
+    });
+  }, []);
+
   const handleInsertReview = (review: Review) => {
     const clone = [...reviews];
     clone.push(review);
@@ -38,16 +51,15 @@ const MovieDetails = () => {
 
   return (
     <div className="movies-container-details">
-      <div>
-        <h2>Tela detalhes do filme</h2>
-        <h2>id: {movieId}</h2>
+      <div className="movies-container-details-2">
+        <CardMovieDetail movie={movie} />
+        {hasAnyRoles(['ROLE_MEMBER']) && (
+          <FormReview movieId={movieId} onInsertReview={handleInsertReview} />
+        )}
+        {reviews.map((review) => (
+          <ListReview review={review} key={review.id} />
+        ))}
       </div>
-      {hasAnyRoles(['ROLE_MEMBER']) && (
-        <FormReview movieId={movieId} onInsertReview={handleInsertReview} />
-      )}
-      {reviews.map((review) => (
-        <ListReview review={review} key={review.id} />
-      ))}
     </div>
   );
 };

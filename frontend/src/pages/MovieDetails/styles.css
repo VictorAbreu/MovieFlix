@@ -1,5 +1,6 @@
 .movies-container-details {
   padding: 10px;
+  background: #525252;
 }
 
 .movies-container-details h2 {
@@ -10,7 +11,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 130px;
+  height: 180px;
   padding: 20px 10px;
   background: #6c6c6c;
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
@@ -66,5 +67,19 @@
 
   .card-container-list {
     padding: 30px 20px;
+  }
+}
+
+@media (min-width: 992px) {
+
+  .movies-container-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .movies-container-details-2 {
+    max-width: 992px;
   }
 }
