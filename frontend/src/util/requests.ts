@@ -37,6 +37,21 @@ export const requestBackendLogin = (loginData: LoginData) => {
   });
 };
 
+export const makeRequest = (params: AxiosRequestConfig) => {
+  return axios({
+    ...params,
+    baseURL: BASE_URL
+  })
+}
+
+export const makePrivateRequest = (params: AxiosRequestConfig) => {
+  const headers = {
+    'Authorization': `Bearer ${getAuthData().access_token}`
+  }
+
+  return makeRequest({ ...params, headers })
+}
+
 export const requestBackend = (config: AxiosRequestConfig) => {
   const headers = config.withCredentials
     ? {

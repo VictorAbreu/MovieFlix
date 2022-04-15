@@ -46,6 +46,7 @@ const Login = () => {
           console.log('ERRO', error);
         });
     };
+    
   return (
     <div className="home-container-card">
       <div className="home-content-container">

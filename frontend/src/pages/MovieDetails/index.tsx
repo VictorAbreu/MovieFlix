@@ -41,7 +41,7 @@ const MovieDetails = () => {
     requestBackend(movies).then((response) => {
       setMovie(response.data);
     });
-  }, []);
+  }, [movieId]);
 
   const handleInsertReview = (review: Review) => {
     const clone = [...reviews];
